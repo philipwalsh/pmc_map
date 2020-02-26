@@ -23,8 +23,11 @@ states <- map_data("state")
 states %>% head(3)
 
 # filter out only mass
-single_state_df <- subset(states, region == map_state)
-single_state_df %>% head(3)
+single_state_df <- subset(states, (region == map_state) & (subregion != "martha's vineyard") & (subregion != "nantucket") )
+
+
+single_state_df %>% head(10)
+single_state_df %>% tail(10)
 
 # get all counties
 counties <- map_data("county")
@@ -43,20 +46,21 @@ head(state_counties)
 #  geom_polygon(color = "black", fill = "gray")
 
 
-day_1_waterstops <- read.csv("day_1_waterstops.csv", header = T)
-head(day_1_waterstops)
-tail(day_1_waterstops)
+waterstops <- read.csv("data/waterstops.csv", header = T)
+head(waterstops)
+tail(waterstops)
 
 
-state_base <- ggplot(data = single_state_df, mapping = aes(x = long, y = lat)) +
-  coord_fixed(1.3) +
+state_base <- ggplot(data = single_state_df, mapping = aes(x = long, y = lat)) + 
+  coord_fixed(1.3) + 
   geom_polygon(color = "black", fill = "gray")
 
+
 state_base + theme_void() +
-  geom_polygon(data = state_counties, fill = NA, color = "white") +
-  geom_polygon(color = "black", fill = NA) +
+  #geom_polygon(data = state_counties, fill = NA, color = "white") +
+  #geom_polygon(color = "black", fill = NA) +
   #geom_line(data = day_1_waterstops, aes(lon,lat), color="red", size=1)+
-  geom_point(data = day_1_waterstops, aes(lon,lat), color="blue", size=2)+
-  geom_text(data = day_1_waterstops,aes(x=lon, y=lat, label=WaterstopName), vjust=-1)
+  geom_point(data = waterstops, aes(lon,lat), color="blue", size=2)#+
+  #geom_text(data = waterstops,aes(x=lon, y=lat, label=WaterstopName), vjust=-1)
 
 

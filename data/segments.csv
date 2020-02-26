@@ -1,11 +1,10 @@
 SegmentID,SegmentName,SegmentDescription,Day
 1,Sturbridge to Dighton Rehoboth (Lunch),Sturbridge to Dighton Rehoboth (Lunch),1
 2,DR to MMA,DR to MMA,1
-3,MMA to Barnstable,MMA to Barnstable,2
-4,Barnstable to P-Town Inn,Barnstable to P-Town Inn,2
-5,Barnstable to P-Town Family Finish,Barnstable to P-Town Family Finish,2
+3,MMA to Barnstable,MMA to Brewster,2
+4,Brewster to P-Town Inn,Brerewster to P-Town Inn,2
+5,Brewster to P-Town Family Finish,Brewster to P-Town Family Finish,2
 6,Babson to Dighton Rehoboth (Lunch),Babson to Dighton Rehoboth (Lunch),1
-7,MMA to Babson,MMA to Babson,2
+7,MMA to Patriot Place,MMA to Patriot Place,2
 8,Babson to Patriot Place,Babson to Patriot Place,2
 9,Patriot Place to Babson,Patriot Place to Babson,2
-10,MMA to Patriot Place,MMA to Patriot Place,2
