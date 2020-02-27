@@ -1,0 +1,413 @@
+"RouteID","RouteType","RouteName","RouteDescription","RouteSegmentSequence","SegmentID","SegmentMapPointSequence","MapPointID","MapPointName","MapPointType","lat","lon"
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",1,1,1,184,"stur_to_whit","waypoint",42.111891,-72.087195
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",1,1,2,185,"stur_to_whit","waypoint",42.106167,-71.68397
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",1,1,3,186,"whit_to_frank","waypoint",42.095666,-71.643973
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",1,1,4,187,"whit_to_frank","waypoint",42.056275,-71.41965
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",1,1,5,188,"frank_to_lunch","waypoint",42.055184,-71.422568
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",1,1,6,189,"frank_to_lunch","waypoint",41.851921,-71.19944
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",2,2,1,190,"dr_to_mma","waypoint",41.851088,-71.195232
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",2,2,2,191,"dr_to_mma","waypoint",41.742584,-70.618693
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",3,3,NA,NA,NA,NA,NA,NA
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",4,4,2,18,"brew_to_ptown","waypoint",41.786517,-69.993219
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",4,4,3,19,"brew_to_ptown","waypoint",41.836695,-69.974247
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",4,4,4,20,"brew_to_ptown","waypoint",41.915542,-69.988282
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",4,4,5,21,"brew_to_ptown","waypoint",42.034514,-70.080342
+1,"2 Day","Sturbridge to P-Town Inn","Sturbridge to P-Town Inn",4,4,6,22,"brew_to_ptown","waypoint",42.065769,-70.153044
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",1,1,1,184,"stur_to_whit","waypoint",42.111891,-72.087195
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",1,1,2,185,"stur_to_whit","waypoint",42.106167,-71.68397
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",1,1,3,186,"whit_to_frank","waypoint",42.095666,-71.643973
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",1,1,4,187,"whit_to_frank","waypoint",42.056275,-71.41965
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",1,1,5,188,"frank_to_lunch","waypoint",42.055184,-71.422568
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",1,1,6,189,"frank_to_lunch","waypoint",41.851921,-71.19944
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",2,2,1,190,"dr_to_mma","waypoint",41.851088,-71.195232
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",2,2,2,191,"dr_to_mma","waypoint",41.742584,-70.618693
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",3,7,1,192,"mma_to_pat","waypoint",41.742584,-70.618693
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",3,7,2,193,"mma_to_pat","waypoint",42.085339,-71.257104
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,2,80,"pat_to_wal","waypoint",42.085002,-71.257779
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,3,81,"pat_to_wal","waypoint",42.074678,-71.259244
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,4,82,"pat_to_wal","waypoint",42.074678,-71.259244
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,5,83,"pat_to_wal","waypoint",42.076374,-71.245801
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,6,84,"pat_to_wal","waypoint",42.074025,-71.238484
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,7,85,"pat_to_wal","waypoint",42.079153,-71.232808
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,8,86,"pat_to_wal","waypoint",42.084815,-71.231091
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,9,87,"pat_to_wal","waypoint",42.098087,-71.218013
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,10,88,"pat_to_wal","waypoint",42.09999,-71.216425
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,11,89,"pat_to_wal","waypoint",42.10319,-71.209494
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,12,90,"pat_to_wal","waypoint",42.108897,-71.210567
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,13,91,"pat_to_wal","waypoint",42.110298,-71.210824
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,14,92,"pat_to_wal","waypoint",42.116673,-71.208453
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,15,93,"pat_to_wal","waypoint",42.116673,-71.208453
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,16,94,"pat_to_wal","waypoint",42.116673,-71.208453
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,17,95,"pat_to_wal","waypoint",42.124973,-71.209129
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,18,96,"pat_to_wal","waypoint",42.12954,-71.210899
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,19,97,"pat_to_wal","waypoint",42.135674,-71.208292
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,20,98,"pat_to_wal","waypoint",42.140352,-71.209923
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,21,99,"pat_to_wal","waypoint",42.140273,-71.218506
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,22,100,"pat_to_wal","waypoint",42.142302,-71.222229
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,23,101,"pat_to_wal","waypoint",42.153001,-71.215481
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,24,102,"pat_to_wal","waypoint",42.15592,-71.224504
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,25,103,"pat_to_wal","waypoint",42.155117,-71.228828
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,26,104,"pat_to_wal","waypoint",42.155252,-71.230201
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,27,105,"pat_to_wal","waypoint",42.1593,-71.23446
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,28,106,"pat_to_wal","waypoint",42.158481,-71.2377
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,29,107,"pat_to_wal","waypoint",42.160119,-71.240371
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,30,108,"pat_to_wal","waypoint",42.162211,-71.237549
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,32,109,"wal_to_bab","waypoint",42.163794,-71.236608
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,33,110,"wal_to_bab","waypoint",42.201554,-71.249127
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,34,111,"wal_to_bab","waypoint",42.204155,-71.259142
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,35,112,"wal_to_bab","waypoint",42.221692,-71.264756
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,36,113,"wal_to_bab","waypoint",42.22321,-71.270292
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,37,114,"wal_to_bab","waypoint",42.244277,-71.280255
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,38,115,"wal_to_bab","waypoint",42.25432,-71.272027
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,39,116,"wal_to_bab","waypoint",42.258833,-71.271842
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,40,117,"wal_to_bab","waypoint",42.259182,-71.270973
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,41,118,"wal_to_bab","waypoint",42.272063,-71.265744
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,42,119,"wal_to_bab","waypoint",42.275953,-71.255863
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,43,120,"wal_to_bab","waypoint",42.283565,-71.252805
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,44,121,"wal_to_bab","waypoint",42.288933,-71.26439
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,45,122,"wal_to_bab","waypoint",42.290409,-71.262985
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,46,123,"wal_to_bab","waypoint",42.291378,-71.26375
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,47,124,"wal_to_bab","waypoint",42.292565,-71.261619
+3,"2 Day","Sturbridge to Babson","Sturbridge to Babson",4,9,48,125,"wal_to_bab","waypoint",42.29412,-71.261952
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,1,126,"bab_to_wren","waypoint",42.296454,-71.262911
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,2,127,"bab_to_wren","waypoint",42.297375,-71.263136
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,3,128,"bab_to_wren","waypoint",42.298621,-71.260819
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,4,129,"bab_to_wren","waypoint",42.291796,-71.250058
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,5,130,"bab_to_wren","waypoint",42.283565,-71.25274
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,6,131,"bab_to_wren","waypoint",42.275865,-71.256141
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,7,132,"bab_to_wren","waypoint",42.270538,-71.266537
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,8,133,"bab_to_wren","waypoint",42.268355,-71.273328
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,9,134,"bab_to_wren","waypoint",42.269212,-71.301749
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,10,135,"bab_to_wren","waypoint",42.269212,-71.301749
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,11,136,"bab_to_wren","waypoint",42.241061,-71.300676
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,12,137,"bab_to_wren","waypoint",42.230656,-71.326001
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,13,138,"bab_to_wren","waypoint",42.230656,-71.326001
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,14,139,"bab_to_wren","waypoint",42.201184,-71.323029
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,15,140,"bab_to_wren","waypoint",42.201184,-71.323029
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,16,141,"bab_to_wren","waypoint",42.186637,-71.305422
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,17,142,"bab_to_wren","waypoint",42.187114,-71.304124
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,18,143,"bab_to_wren","waypoint",42.179665,-71.296174
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,19,144,"bab_to_wren","waypoint",42.173018,-71.298352
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,20,145,"bab_to_wren","waypoint",42.173018,-71.298352
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,21,146,"bab_to_wren","waypoint",42.120421,-71.31094
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,22,147,"bab_to_wren","waypoint",42.117217,-71.310099
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,23,148,"bab_to_wren","waypoint",42.109258,-71.316161
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,24,149,"bab_to_wren","waypoint",42.101878,-71.31996
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,25,150,"bab_to_wren","waypoint",42.097945,-71.315325
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,26,151,"bab_to_wren","waypoint",42.092372,-71.316688
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,27,152,"bab_to_wren","waypoint",42.083383,-71.326687
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,28,153,"wren_to_lunch","waypoint",42.082754,-71.31819
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,29,154,"wren_to_lunch","waypoint",42.082778,-71.316827
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,30,155,"wren_to_lunch","waypoint",42.071789,-71.307321
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,31,156,"wren_to_lunch","waypoint",42.080206,-71.284984
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,32,157,"wren_to_lunch","waypoint",42.076742,-71.278321
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,33,158,"wren_to_lunch","waypoint",42.075715,-71.270457
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,34,159,"wren_to_lunch","waypoint",42.070865,-71.269019
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,35,160,"wren_to_lunch","waypoint",42.056607,-71.26771
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,36,161,"wren_to_lunch","waypoint",42.058471,-71.264084
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,37,162,"wren_to_lunch","waypoint",42.051883,-71.259224
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,38,163,"wren_to_lunch","waypoint",42.047135,-71.261262
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,39,164,"wren_to_lunch","waypoint",42.045717,-71.259717
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,40,165,"wren_to_lunch","waypoint",42.036816,-71.270452
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,41,166,"wren_to_lunch","waypoint",42.030313,-71.263564
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,42,167,"wren_to_lunch","waypoint",42.029269,-71.265828
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,43,168,"wren_to_lunch","waypoint",42.021116,-71.260431
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,44,169,"wren_to_lunch","waypoint",41.999593,-71.272616
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,45,170,"wren_to_lunch","waypoint",41.975727,-71.246999
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,46,171,"wren_to_lunch","waypoint",41.950464,-71.228149
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,47,172,"wren_to_lunch","waypoint",41.950408,-71.227441
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,48,173,"wren_to_lunch","waypoint",41.944758,-71.21977
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,49,174,"wren_to_lunch","waypoint",41.943896,-71.220811
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,50,175,"wren_to_lunch","waypoint",41.93467,-71.221326
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,51,176,"wren_to_lunch","waypoint",41.924661,-71.228171
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,52,177,"wren_to_lunch","waypoint",41.905455,-71.22214
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,53,178,"wren_to_lunch","waypoint",41.903938,-71.21816
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,54,179,"wren_to_lunch","waypoint",41.897661,-71.219458
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,55,180,"wren_to_lunch","waypoint",41.888235,-71.207624
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,56,181,"wren_to_lunch","waypoint",41.875421,-71.209903
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,57,182,"wren_to_lunch","waypoint",41.85197,-71.202028
+4,"2 Day","Babson to P-Town","Babson to P-Town",1,6,58,183,"wren_to_lunch","waypoint",41.851946,-71.199678
+4,"2 Day","Babson to P-Town","Babson to P-Town",2,2,1,190,"dr_to_mma","waypoint",41.851088,-71.195232
+4,"2 Day","Babson to P-Town","Babson to P-Town",2,2,2,191,"dr_to_mma","waypoint",41.742584,-70.618693
+4,"2 Day","Babson to P-Town","Babson to P-Town",3,3,NA,NA,NA,NA,NA,NA
+4,"2 Day","Babson to P-Town","Babson to P-Town",4,4,2,18,"brew_to_ptown","waypoint",41.786517,-69.993219
+4,"2 Day","Babson to P-Town","Babson to P-Town",4,4,3,19,"brew_to_ptown","waypoint",41.836695,-69.974247
+4,"2 Day","Babson to P-Town","Babson to P-Town",4,4,4,20,"brew_to_ptown","waypoint",41.915542,-69.988282
+4,"2 Day","Babson to P-Town","Babson to P-Town",4,4,5,21,"brew_to_ptown","waypoint",42.034514,-70.080342
+4,"2 Day","Babson to P-Town","Babson to P-Town",4,4,6,22,"brew_to_ptown","waypoint",42.065769,-70.153044
+6,"1 Day","Sturbridge to MMA","Sturbridge to MMA",1,1,1,184,"stur_to_whit","waypoint",42.111891,-72.087195
+6,"1 Day","Sturbridge to MMA","Sturbridge to MMA",1,1,2,185,"stur_to_whit","waypoint",42.106167,-71.68397
+6,"1 Day","Sturbridge to MMA","Sturbridge to MMA",1,1,3,186,"whit_to_frank","waypoint",42.095666,-71.643973
+6,"1 Day","Sturbridge to MMA","Sturbridge to MMA",1,1,4,187,"whit_to_frank","waypoint",42.056275,-71.41965
+6,"1 Day","Sturbridge to MMA","Sturbridge to MMA",1,1,5,188,"frank_to_lunch","waypoint",42.055184,-71.422568
+6,"1 Day","Sturbridge to MMA","Sturbridge to MMA",1,1,6,189,"frank_to_lunch","waypoint",41.851921,-71.19944
+6,"1 Day","Sturbridge to MMA","Sturbridge to MMA",2,2,1,190,"dr_to_mma","waypoint",41.851088,-71.195232
+6,"1 Day","Sturbridge to MMA","Sturbridge to MMA",2,2,2,191,"dr_to_mma","waypoint",41.742584,-70.618693
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,1,126,"bab_to_wren","waypoint",42.296454,-71.262911
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,2,127,"bab_to_wren","waypoint",42.297375,-71.263136
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,3,128,"bab_to_wren","waypoint",42.298621,-71.260819
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,4,129,"bab_to_wren","waypoint",42.291796,-71.250058
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,5,130,"bab_to_wren","waypoint",42.283565,-71.25274
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,6,131,"bab_to_wren","waypoint",42.275865,-71.256141
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,7,132,"bab_to_wren","waypoint",42.270538,-71.266537
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,8,133,"bab_to_wren","waypoint",42.268355,-71.273328
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,9,134,"bab_to_wren","waypoint",42.269212,-71.301749
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,10,135,"bab_to_wren","waypoint",42.269212,-71.301749
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,11,136,"bab_to_wren","waypoint",42.241061,-71.300676
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,12,137,"bab_to_wren","waypoint",42.230656,-71.326001
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,13,138,"bab_to_wren","waypoint",42.230656,-71.326001
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,14,139,"bab_to_wren","waypoint",42.201184,-71.323029
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,15,140,"bab_to_wren","waypoint",42.201184,-71.323029
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,16,141,"bab_to_wren","waypoint",42.186637,-71.305422
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,17,142,"bab_to_wren","waypoint",42.187114,-71.304124
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,18,143,"bab_to_wren","waypoint",42.179665,-71.296174
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,19,144,"bab_to_wren","waypoint",42.173018,-71.298352
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,20,145,"bab_to_wren","waypoint",42.173018,-71.298352
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,21,146,"bab_to_wren","waypoint",42.120421,-71.31094
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,22,147,"bab_to_wren","waypoint",42.117217,-71.310099
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,23,148,"bab_to_wren","waypoint",42.109258,-71.316161
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,24,149,"bab_to_wren","waypoint",42.101878,-71.31996
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,25,150,"bab_to_wren","waypoint",42.097945,-71.315325
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,26,151,"bab_to_wren","waypoint",42.092372,-71.316688
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,27,152,"bab_to_wren","waypoint",42.083383,-71.326687
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,28,153,"wren_to_lunch","waypoint",42.082754,-71.31819
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,29,154,"wren_to_lunch","waypoint",42.082778,-71.316827
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,30,155,"wren_to_lunch","waypoint",42.071789,-71.307321
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,31,156,"wren_to_lunch","waypoint",42.080206,-71.284984
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,32,157,"wren_to_lunch","waypoint",42.076742,-71.278321
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,33,158,"wren_to_lunch","waypoint",42.075715,-71.270457
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,34,159,"wren_to_lunch","waypoint",42.070865,-71.269019
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,35,160,"wren_to_lunch","waypoint",42.056607,-71.26771
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,36,161,"wren_to_lunch","waypoint",42.058471,-71.264084
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,37,162,"wren_to_lunch","waypoint",42.051883,-71.259224
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,38,163,"wren_to_lunch","waypoint",42.047135,-71.261262
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,39,164,"wren_to_lunch","waypoint",42.045717,-71.259717
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,40,165,"wren_to_lunch","waypoint",42.036816,-71.270452
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,41,166,"wren_to_lunch","waypoint",42.030313,-71.263564
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,42,167,"wren_to_lunch","waypoint",42.029269,-71.265828
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,43,168,"wren_to_lunch","waypoint",42.021116,-71.260431
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,44,169,"wren_to_lunch","waypoint",41.999593,-71.272616
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,45,170,"wren_to_lunch","waypoint",41.975727,-71.246999
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,46,171,"wren_to_lunch","waypoint",41.950464,-71.228149
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,47,172,"wren_to_lunch","waypoint",41.950408,-71.227441
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,48,173,"wren_to_lunch","waypoint",41.944758,-71.21977
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,49,174,"wren_to_lunch","waypoint",41.943896,-71.220811
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,50,175,"wren_to_lunch","waypoint",41.93467,-71.221326
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,51,176,"wren_to_lunch","waypoint",41.924661,-71.228171
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,52,177,"wren_to_lunch","waypoint",41.905455,-71.22214
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,53,178,"wren_to_lunch","waypoint",41.903938,-71.21816
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,54,179,"wren_to_lunch","waypoint",41.897661,-71.219458
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,55,180,"wren_to_lunch","waypoint",41.888235,-71.207624
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,56,181,"wren_to_lunch","waypoint",41.875421,-71.209903
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,57,182,"wren_to_lunch","waypoint",41.85197,-71.202028
+7,"1 Day","Babson to MMA","Babson to MMA",1,6,58,183,"wren_to_lunch","waypoint",41.851946,-71.199678
+7,"1 Day","Babson to MMA","Babson to MMA",2,2,1,190,"dr_to_mma","waypoint",41.851088,-71.195232
+7,"1 Day","Babson to MMA","Babson to MMA",2,2,2,191,"dr_to_mma","waypoint",41.742584,-70.618693
+8,"1 Day","MMA to Babson","MMA to Babson",1,7,1,192,"mma_to_pat","waypoint",41.742584,-70.618693
+8,"1 Day","MMA to Babson","MMA to Babson",1,7,2,193,"mma_to_pat","waypoint",42.085339,-71.257104
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,2,80,"pat_to_wal","waypoint",42.085002,-71.257779
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,3,81,"pat_to_wal","waypoint",42.074678,-71.259244
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,4,82,"pat_to_wal","waypoint",42.074678,-71.259244
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,5,83,"pat_to_wal","waypoint",42.076374,-71.245801
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,6,84,"pat_to_wal","waypoint",42.074025,-71.238484
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,7,85,"pat_to_wal","waypoint",42.079153,-71.232808
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,8,86,"pat_to_wal","waypoint",42.084815,-71.231091
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,9,87,"pat_to_wal","waypoint",42.098087,-71.218013
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,10,88,"pat_to_wal","waypoint",42.09999,-71.216425
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,11,89,"pat_to_wal","waypoint",42.10319,-71.209494
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,12,90,"pat_to_wal","waypoint",42.108897,-71.210567
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,13,91,"pat_to_wal","waypoint",42.110298,-71.210824
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,14,92,"pat_to_wal","waypoint",42.116673,-71.208453
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,15,93,"pat_to_wal","waypoint",42.116673,-71.208453
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,16,94,"pat_to_wal","waypoint",42.116673,-71.208453
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,17,95,"pat_to_wal","waypoint",42.124973,-71.209129
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,18,96,"pat_to_wal","waypoint",42.12954,-71.210899
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,19,97,"pat_to_wal","waypoint",42.135674,-71.208292
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,20,98,"pat_to_wal","waypoint",42.140352,-71.209923
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,21,99,"pat_to_wal","waypoint",42.140273,-71.218506
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,22,100,"pat_to_wal","waypoint",42.142302,-71.222229
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,23,101,"pat_to_wal","waypoint",42.153001,-71.215481
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,24,102,"pat_to_wal","waypoint",42.15592,-71.224504
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,25,103,"pat_to_wal","waypoint",42.155117,-71.228828
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,26,104,"pat_to_wal","waypoint",42.155252,-71.230201
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,27,105,"pat_to_wal","waypoint",42.1593,-71.23446
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,28,106,"pat_to_wal","waypoint",42.158481,-71.2377
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,29,107,"pat_to_wal","waypoint",42.160119,-71.240371
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,30,108,"pat_to_wal","waypoint",42.162211,-71.237549
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,32,109,"wal_to_bab","waypoint",42.163794,-71.236608
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,33,110,"wal_to_bab","waypoint",42.201554,-71.249127
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,34,111,"wal_to_bab","waypoint",42.204155,-71.259142
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,35,112,"wal_to_bab","waypoint",42.221692,-71.264756
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,36,113,"wal_to_bab","waypoint",42.22321,-71.270292
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,37,114,"wal_to_bab","waypoint",42.244277,-71.280255
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,38,115,"wal_to_bab","waypoint",42.25432,-71.272027
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,39,116,"wal_to_bab","waypoint",42.258833,-71.271842
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,40,117,"wal_to_bab","waypoint",42.259182,-71.270973
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,41,118,"wal_to_bab","waypoint",42.272063,-71.265744
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,42,119,"wal_to_bab","waypoint",42.275953,-71.255863
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,43,120,"wal_to_bab","waypoint",42.283565,-71.252805
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,44,121,"wal_to_bab","waypoint",42.288933,-71.26439
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,45,122,"wal_to_bab","waypoint",42.290409,-71.262985
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,46,123,"wal_to_bab","waypoint",42.291378,-71.26375
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,47,124,"wal_to_bab","waypoint",42.292565,-71.261619
+8,"1 Day","MMA to Babson","MMA to Babson",2,9,48,125,"wal_to_bab","waypoint",42.29412,-71.261952
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,2,23,"bab_to_med","waypoint",42.298573,-71.260706
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,3,24,"bab_to_med","waypoint",42.293581,-71.256293
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,4,25,"bab_to_med","waypoint",42.291787,-71.250006
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,5,26,"bab_to_med","waypoint",42.28708,-71.251815
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,6,27,"bab_to_med","waypoint",42.279246,-71.253693
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,7,28,"bab_to_med","waypoint",42.276003,-71.255898
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,8,29,"bab_to_med","waypoint",42.272994,-71.264556
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,9,30,"bab_to_med","waypoint",42.270557,-71.266476
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,10,31,"bab_to_med","waypoint",42.270386,-71.26823
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,11,32,"bab_to_med","waypoint",42.268354,-71.273267
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,12,33,"bab_to_med","waypoint",42.269438,-71.276856
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,13,34,"bab_to_med","waypoint",42.269184,-71.27876
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,14,35,"bab_to_med","waypoint",42.269191,-71.301767
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,15,36,"bab_to_med","waypoint",42.266301,-71.30083
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,16,37,"bab_to_med","waypoint",42.262244,-71.299285
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,17,38,"bab_to_med","waypoint",42.257019,-71.297515
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,18,39,"bab_to_med","waypoint",42.25177,-71.297848
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,19,40,"bab_to_med","waypoint",42.241774,-71.299093
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,20,41,"bab_to_med","waypoint",42.240503,-71.305155
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,21,42,"bab_to_med","waypoint",42.240662,-71.309178
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,22,43,"bab_to_med","waypoint",42.230662,-71.325958
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,23,44,"bab_to_med","waypoint",42.21942,-71.321298
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,24,45,"bab_to_med","waypoint",42.218201,-71.321576
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,25,46,"bab_to_med","waypoint",42.21364,-71.323861
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,26,47,"bab_to_med","waypoint",42.201465,-71.323346
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,27,48,"bab_to_med","waypoint",42.198215,-71.316597
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,28,49,"bab_to_med","waypoint",42.196755,-71.312153
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,29,50,"bab_to_med","waypoint",42.192248,-71.30961
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,30,51,"bab_to_med","waypoint",42.186763,-71.305512
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,31,52,"bab_to_med","waypoint",42.188099,-71.301349
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,32,53,"bab_to_med","waypoint",42.188997,-71.298914
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,33,54,"bab_to_med","waypoint",42.18759,-71.297208
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,34,55,"bab_to_med","waypoint",42.186803,-71.29621
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,36,56,"med_to_pat","waypoint",42.184974,-71.298077
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,37,57,"med_to_pat","waypoint",42.184171,-71.297347
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,38,58,"med_to_pat","waypoint",42.183344,-71.298667
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,39,59,"med_to_pat","waypoint",42.183344,-71.298667
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,40,60,"med_to_pat","waypoint",42.176769,-71.295834
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,41,61,"med_to_pat","waypoint",42.172976,-71.298409
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,42,62,"med_to_pat","waypoint",42.171529,-71.297776
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,43,63,"med_to_pat","waypoint",42.165676,-71.300233
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,44,64,"med_to_pat","waypoint",42.155608,-71.302475
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,45,65,"med_to_pat","waypoint",42.140956,-71.312099
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,46,66,"med_to_pat","waypoint",42.122974,-71.311123
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,47,67,"med_to_pat","waypoint",42.120467,-71.31078
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,48,68,"med_to_pat","waypoint",42.121478,-71.303806
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,49,69,"med_to_pat","waypoint",42.111936,-71.283915
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,50,70,"med_to_pat","waypoint",42.107932,-71.283443
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,51,71,"med_to_pat","waypoint",42.103323,-71.28163
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,52,72,"med_to_pat","waypoint",42.101206,-71.276255
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,53,73,"med_to_pat","waypoint",42.10119,-71.269496
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,54,74,"med_to_pat","waypoint",42.104414,-71.266288
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,55,75,"med_to_pat","waypoint",42.105035,-71.261481
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,56,76,"med_to_pat","waypoint",42.102161,-71.25911
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,57,77,"med_to_pat","waypoint",42.095705,-71.256042
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,58,78,"med_to_pat","waypoint",42.085992,-71.256278
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",1,8,59,79,"med_to_pat","waypoint",42.085339,-71.257104
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,2,80,"pat_to_wal","waypoint",42.085002,-71.257779
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,3,81,"pat_to_wal","waypoint",42.074678,-71.259244
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,4,82,"pat_to_wal","waypoint",42.074678,-71.259244
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,5,83,"pat_to_wal","waypoint",42.076374,-71.245801
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,6,84,"pat_to_wal","waypoint",42.074025,-71.238484
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,7,85,"pat_to_wal","waypoint",42.079153,-71.232808
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,8,86,"pat_to_wal","waypoint",42.084815,-71.231091
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,9,87,"pat_to_wal","waypoint",42.098087,-71.218013
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,10,88,"pat_to_wal","waypoint",42.09999,-71.216425
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,11,89,"pat_to_wal","waypoint",42.10319,-71.209494
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,12,90,"pat_to_wal","waypoint",42.108897,-71.210567
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,13,91,"pat_to_wal","waypoint",42.110298,-71.210824
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,14,92,"pat_to_wal","waypoint",42.116673,-71.208453
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,15,93,"pat_to_wal","waypoint",42.116673,-71.208453
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,16,94,"pat_to_wal","waypoint",42.116673,-71.208453
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,17,95,"pat_to_wal","waypoint",42.124973,-71.209129
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,18,96,"pat_to_wal","waypoint",42.12954,-71.210899
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,19,97,"pat_to_wal","waypoint",42.135674,-71.208292
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,20,98,"pat_to_wal","waypoint",42.140352,-71.209923
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,21,99,"pat_to_wal","waypoint",42.140273,-71.218506
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,22,100,"pat_to_wal","waypoint",42.142302,-71.222229
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,23,101,"pat_to_wal","waypoint",42.153001,-71.215481
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,24,102,"pat_to_wal","waypoint",42.15592,-71.224504
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,25,103,"pat_to_wal","waypoint",42.155117,-71.228828
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,26,104,"pat_to_wal","waypoint",42.155252,-71.230201
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,27,105,"pat_to_wal","waypoint",42.1593,-71.23446
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,28,106,"pat_to_wal","waypoint",42.158481,-71.2377
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,29,107,"pat_to_wal","waypoint",42.160119,-71.240371
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,30,108,"pat_to_wal","waypoint",42.162211,-71.237549
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,32,109,"wal_to_bab","waypoint",42.163794,-71.236608
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,33,110,"wal_to_bab","waypoint",42.201554,-71.249127
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,34,111,"wal_to_bab","waypoint",42.204155,-71.259142
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,35,112,"wal_to_bab","waypoint",42.221692,-71.264756
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,36,113,"wal_to_bab","waypoint",42.22321,-71.270292
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,37,114,"wal_to_bab","waypoint",42.244277,-71.280255
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,38,115,"wal_to_bab","waypoint",42.25432,-71.272027
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,39,116,"wal_to_bab","waypoint",42.258833,-71.271842
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,40,117,"wal_to_bab","waypoint",42.259182,-71.270973
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,41,118,"wal_to_bab","waypoint",42.272063,-71.265744
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,42,119,"wal_to_bab","waypoint",42.275953,-71.255863
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,43,120,"wal_to_bab","waypoint",42.283565,-71.252805
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,44,121,"wal_to_bab","waypoint",42.288933,-71.26439
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,45,122,"wal_to_bab","waypoint",42.290409,-71.262985
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,46,123,"wal_to_bab","waypoint",42.291378,-71.26375
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,47,124,"wal_to_bab","waypoint",42.292565,-71.261619
+9,"1 Day","Babson to Patriot Place to Babson","Babson to Patriot Place to Babson",2,9,48,125,"wal_to_bab","waypoint",42.29412,-71.261952
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,2,23,"bab_to_med","waypoint",42.298573,-71.260706
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,3,24,"bab_to_med","waypoint",42.293581,-71.256293
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,4,25,"bab_to_med","waypoint",42.291787,-71.250006
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,5,26,"bab_to_med","waypoint",42.28708,-71.251815
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,6,27,"bab_to_med","waypoint",42.279246,-71.253693
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,7,28,"bab_to_med","waypoint",42.276003,-71.255898
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,8,29,"bab_to_med","waypoint",42.272994,-71.264556
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,9,30,"bab_to_med","waypoint",42.270557,-71.266476
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,10,31,"bab_to_med","waypoint",42.270386,-71.26823
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,11,32,"bab_to_med","waypoint",42.268354,-71.273267
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,12,33,"bab_to_med","waypoint",42.269438,-71.276856
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,13,34,"bab_to_med","waypoint",42.269184,-71.27876
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,14,35,"bab_to_med","waypoint",42.269191,-71.301767
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,15,36,"bab_to_med","waypoint",42.266301,-71.30083
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,16,37,"bab_to_med","waypoint",42.262244,-71.299285
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,17,38,"bab_to_med","waypoint",42.257019,-71.297515
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,18,39,"bab_to_med","waypoint",42.25177,-71.297848
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,19,40,"bab_to_med","waypoint",42.241774,-71.299093
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,20,41,"bab_to_med","waypoint",42.240503,-71.305155
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,21,42,"bab_to_med","waypoint",42.240662,-71.309178
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,22,43,"bab_to_med","waypoint",42.230662,-71.325958
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,23,44,"bab_to_med","waypoint",42.21942,-71.321298
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,24,45,"bab_to_med","waypoint",42.218201,-71.321576
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,25,46,"bab_to_med","waypoint",42.21364,-71.323861
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,26,47,"bab_to_med","waypoint",42.201465,-71.323346
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,27,48,"bab_to_med","waypoint",42.198215,-71.316597
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,28,49,"bab_to_med","waypoint",42.196755,-71.312153
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,29,50,"bab_to_med","waypoint",42.192248,-71.30961
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,30,51,"bab_to_med","waypoint",42.186763,-71.305512
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,31,52,"bab_to_med","waypoint",42.188099,-71.301349
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,32,53,"bab_to_med","waypoint",42.188997,-71.298914
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,33,54,"bab_to_med","waypoint",42.18759,-71.297208
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,34,55,"bab_to_med","waypoint",42.186803,-71.29621
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,36,56,"med_to_pat","waypoint",42.184974,-71.298077
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,37,57,"med_to_pat","waypoint",42.184171,-71.297347
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,38,58,"med_to_pat","waypoint",42.183344,-71.298667
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,39,59,"med_to_pat","waypoint",42.183344,-71.298667
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,40,60,"med_to_pat","waypoint",42.176769,-71.295834
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,41,61,"med_to_pat","waypoint",42.172976,-71.298409
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,42,62,"med_to_pat","waypoint",42.171529,-71.297776
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,43,63,"med_to_pat","waypoint",42.165676,-71.300233
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,44,64,"med_to_pat","waypoint",42.155608,-71.302475
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,45,65,"med_to_pat","waypoint",42.140956,-71.312099
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,46,66,"med_to_pat","waypoint",42.122974,-71.311123
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,47,67,"med_to_pat","waypoint",42.120467,-71.31078
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,48,68,"med_to_pat","waypoint",42.121478,-71.303806
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,49,69,"med_to_pat","waypoint",42.111936,-71.283915
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,50,70,"med_to_pat","waypoint",42.107932,-71.283443
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,51,71,"med_to_pat","waypoint",42.103323,-71.28163
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,52,72,"med_to_pat","waypoint",42.101206,-71.276255
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,53,73,"med_to_pat","waypoint",42.10119,-71.269496
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,54,74,"med_to_pat","waypoint",42.104414,-71.266288
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,55,75,"med_to_pat","waypoint",42.105035,-71.261481
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,56,76,"med_to_pat","waypoint",42.102161,-71.25911
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,57,77,"med_to_pat","waypoint",42.095705,-71.256042
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,58,78,"med_to_pat","waypoint",42.085992,-71.256278
+10,"1 Day","Babson to Patriot Place","Babson to Patriot Place",1,8,59,79,"med_to_pat","waypoint",42.085339,-71.257104

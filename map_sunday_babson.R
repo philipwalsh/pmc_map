@@ -13,30 +13,25 @@ library(mapdata)
 library(tidyverse)
 
 routes <- read.csv("data/routes.csv", header = T)
-#routes %>% head(3)
 segments <- read.csv("data/segments.csv", header = T)
-#segments %>% head(3)
 routes_segments <- read.csv("data/routes_segments.csv", header = T)
-#route_segment %>% head(3)
-waypoints <- read.csv("data/waypoints.csv", header = T)
-#waypoints %>% head(3)
+mappoints <- read.csv("data/mappoints.csv", header = T)
+segments_mappoints <- read.csv("data/segments_mappoints.csv", header = T)
 
-
-
-segments_waypoints <- read.csv("data/segments_waypoints.csv", header = T)
-#segments_waypoints %>% head(3)
 # routes > route_segment > segments > segment_waterstop > waterstops
 
 routes_to_segments <- left_join(routes, routes_segments, by="RouteID")
-routes_to_segments_waypoints = left_join(routes_to_segments, segments_waypoints, by="SegmentID")
-routes_waypoints = left_join(routes_to_segments_waypoints, waypoints, by='WaypointID')
+routes_to_segments_mappoints = left_join(routes_to_segments, segments_mappoints, by="SegmentID")
+routes_mappoints = left_join(routes_to_segments_mappoints, mappoints, by='MapPointID')
 
-babson_to_babson <- subset(routes_waypoints, RouteID==9)
+routes
 
-babson_to_babson
-waterstops <- subset(babson_to_babson, WaypointType=='waterstop')
-non_waterstops <- subset(babson_to_babson, WaypointType=='waypoint')
-hubs <- subset(babson_to_babson, WaypointType=='hub')
+babson_to_babson <- subset(routes_mappoints, RouteID==9)
+babson_to_babson %>% select(RouteName, MapPointType, lat, lon ) %>% head()
+
+waterstops <- subset(babson_to_babson, MapPointType=='waterstop')
+waypoints <- subset(babson_to_babson, MapPointType=='waypoint')
+hubs <- subset(babson_to_babson, MapPointType=='hub')
 
 ## setup the sate base map
 map_state = "massachusetts"
@@ -69,11 +64,11 @@ state_base + theme_void() +
 
 # just waypoints
 state_base + theme_void() +
-  geom_path(data = non_waterstops, aes(lon,lat), color="red", size=1)
+  geom_path(data = waypoints, aes(lon,lat), color="red", size=1)
 
 # all together, hubs, waterstops, waypoints
 state_base + theme_void() +
-  geom_path(data = non_waterstops, aes(lon,lat), color="red", size=1)+
+  geom_path(data = waypoints, aes(lon,lat), color="red", size=1)+
   geom_point(data = waterstops, aes(lon,lat), color="blue", size=2)+
   geom_point(data = hubs, aes(lon,lat), color="darkgreen", size=5)
   
