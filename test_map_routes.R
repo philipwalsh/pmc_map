@@ -8,32 +8,30 @@ library(ggplot2)
 library(ggmap)
 library(maps)
 library(mapdata)  
-
+library(sf)
 
 library(tidyverse)
 
 routes <- read.csv("data/routes.csv", header = T)
 #routes %>% head(3)
-
 segments <- read.csv("data/segments.csv", header = T)
 #segments %>% head(3)
-
 routes_segments <- read.csv("data/routes_segments.csv", header = T)
 #route_segment %>% head(3)
-
 waypoints <- read.csv("data/waypoints.csv", header = T)
 #waypoints %>% head(3)
 
+hubs <- subset(waypoints, WaypointType=='hub')
 waterstops <- subset(waypoints, WaypointType=='waterstop')
-
+non_waterstops <- subset(waypoints, WaypointType=='waypoint')
 segments_waypoints <- read.csv("data/segments_waypoints.csv", header = T)
 #segments_waypoints %>% head(3)
-
-
 # routes > route_segment > segments > segment_waterstop > waterstops
-routes_to_segments <- full_join(routes, routes_segments)
-routes_to_segments_waypoints = full_join(routes_to_segments, segments_waypoints)
-routes_waypoints = full_join(routes_to_segments_waypoints, waypoints)
+
+routes_to_segments <- left_join(routes, routes_segments, by="RouteID")
+routes_to_segments_waypoints = left_join(routes_to_segments, segments_waypoints, by="SegmentID")
+routes_waypoints = left_join(routes_to_segments_waypoints, waypoints, by='WaypointID')
+
 
 
 ## setup the sate base map
@@ -45,72 +43,77 @@ counties <- map_data("county")
 state_counties <- subset(counties, region == map_state)
 
 
+worcester_county <- subset(state_counties, subregion == 'worcester')
+norfolk_county <- subset(state_counties, subregion == 'norfolk')
+bristol_county <- subset(state_counties, subregion == 'bristol')
+plymouth_county <- subset(state_counties, subregion == 'plymouth')
+barnstable_county <- subset(state_counties, subregion == 'barnstable')
+
+essex_county <- subset(state_counties, subregion == 'essex')
+middlesex_county <- subset(state_counties, subregion == 'middlesex')
+suffolk_county <- subset(state_counties, subregion == 'suffolk')
+
+
+# pmc_counties <- subset(state_counties, subregion == 'worcester' | subregion == 'norfolk' | subregion == 'bristol' | subregion == 'plymouth' | subregion == 'barnstable')
+#worcester
+#norfolk
+#bristol
+#plymouth
+#barnstable
+
+babson_to_babson = subset(routes_waypoints, RouteID==9)
+head(babson_to_babson)
+
+sturbridge_to_ptown_inn = subset(routes_waypoints, RouteID==1)
+sturbridge_to_ptown_family = subset(routes_waypoints, RouteID==2)
+strubridge_to_babson = subset(routes_waypoints, RouteID==3)
+babson_to_ptown_inn = subset(routes_waypoints, RouteID==5)
+babson_to_ptown_family = subset(routes_waypoints, RouteID==6)
+
+
+
+routes
+
 # just waterstops
-state_base <- ggplot(data = single_state_df, mapping = aes(x = long, y = lat)) + 
-  coord_fixed(1.3) + 
-  geom_polygon(color = "black", fill = "gray")
-
-state_base + theme_void() +
-  geom_point(data = waterstops, aes(lon,lat), color="blue", size=2)
-
-
-
-# all waypoints
-state_base <- ggplot(data = single_state_df, mapping = aes(x = long, y = lat)) + 
-  coord_fixed(1.3) + 
-  geom_polygon(color = "black", fill = "gray")
-
-state_base + theme_void() +
-  geom_point(data = waypoints, aes(lon,lat), color="red", size=2)
-
-
-
- 
-#single route style
-single_route = filter(routes_waypoints, RouteID==1) %>% arrange(RouteSegmentSequence, SegmentWaterstopSequence)
-single_route_waterstops = filter(single_route, WaypointType=='waterstop')
-select(single_route, RouteName, WaypointName,WaypointType, lat, lon) # ,WaterStopName,lat,lon)) 
-
-state_base <- ggplot(data = single_state_df, mapping = aes(x = long, y = lat)) + 
-  coord_fixed(1.3) + 
-  geom_polygon(color = "black", fill = "gray")
-
-state_base + theme_void() +
-  geom_path(data = single_route, aes(lon,lat), size=1)+
-  geom_point(data = single_route_waterstops, aes(lon,lat), size=1)
+ggplot()+
+  coord_fixed(1.3)+
+  theme_void()+
+  geom_polygon(data = worcester_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = norfolk_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = bristol_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = plymouth_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = barnstable_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = essex_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = middlesex_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = suffolk_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_point(data = waterstops, aes(lon,lat), color="blue", size=2)+
+  geom_point(data = hubs, aes(lon,lat), color="darkgreen", size=5)+
+  geom_path(data = babson_to_babson, aes(lon,lat), color="red", size=1)+
+  geom_path(data = sturbridge_to_ptown_inn, aes(lon,lat), color="red", size=1)+
+  geom_path(data = sturbridge_to_ptown_family, aes(lon,lat), color="red", size=1)+
+  geom_path(data = strubridge_to_babson, aes(lon,lat), color="red", size=1)+
+  geom_path(data = babson_to_ptown_inn, aes(lon,lat), color="red", size=1)+
+  geom_path(data = babson_to_ptown_family, aes(lon,lat), color="red", size=1)
+  
 
 
-#single route style
-single_route = filter(routes_waypoints, RouteID==2) %>% arrange(RouteSegmentSequence, SegmentWaterstopSequence)
-single_route_waterstops = filter(single_route, WaypointType=='waterstop')
-select(single_route, RouteName, WaypointName,WaypointType, lat, lon) # ,WaterStopName,lat,lon)) 
-
-state_base <- ggplot(data = single_state_df, mapping = aes(x = long, y = lat)) + 
-  coord_fixed(1.3) + 
-  geom_polygon(color = "black", fill = "gray")
-
-state_base + theme_void() +
-  geom_path(data = single_route, aes(lon,lat), size=1)+
-  geom_point(data = single_route_waterstops, aes(lon,lat), size=1)
 
 
-## all routes, facet wrap
-#single route style
-all_routes = routes_waypoints %>% arrange(RouteID, RouteSegmentSequence, SegmentWaterstopSequence)
-all_waterstops = filter(all_routes, WaypointType=='waterstop')
-select(all_routes, RouteID, RouteName, WaypointName,WaypointType, lat, lon) # ,WaterStopName,lat,lon)) 
-
-state_base <- ggplot(data = single_state_df, mapping = aes(x = long, y = lat)) + 
-  coord_fixed(1.3) + 
-  geom_polygon(color = "black", fill = "gray")
-
-state_base + theme_void() +
-  geom_path(data = all_routes, aes(lon,lat), size=1)+
-  geom_point(data = all_waterstops, aes(lon,lat), size=1)+
-  facet_wrap(~RouteID, ncol=3)
-
-select(all_routes, RouteID, RouteName)
-
-
+ggplot()+
+  coord_fixed(1.3)+
+  theme_void()+
+  geom_polygon(data = worcester_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = norfolk_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = bristol_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = plymouth_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = barnstable_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = essex_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = middlesex_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_polygon(data = suffolk_county, mapping = aes(x = long, y = lat), fill="grey") + 
+  geom_point(data = waterstops, aes(lon,lat), color="blue", size=2)+
+  geom_point(data = hubs, aes(lon,lat), color="darkgreen", size=5)+
+  geom_path(data = routes_waypoints, aes(lon,lat), color="red", size=1)+
+  facet_wrap("RouteName")
+  
 
 
