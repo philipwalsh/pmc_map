@@ -190,3 +190,11 @@ MapPointID,MapPointName,MapPointType,lat,lon
 191,dr_to_mma,waypoint,41.742584,-70.618693
 192,mma_to_pat,waypoint,41.742584,-70.618693
 193,mma_to_pat,waypoint,42.085339,-71.257104
+194,mma_to_barn,waypoint,41.745191,-70.615576
+195,mma_to_barn,waypoint,41.751917,-70.592264
+196,mma_to_barn,waypoint,41.743539,-70.586394
+197,mma_to_barn,waypoint,41.768044,-70.523044
+198,mma_to_barn,waypoint,41.696024,-70.344294
+199,barn_to_brew,waypoint,41.7051,-70.223972
+200,barn_to_brew,waypoint,41.756262,-70.090407
+201,brew_to_ptown,waypoint,42.039242,-70.199969
