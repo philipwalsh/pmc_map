@@ -362,21 +362,205 @@ segments_mappoints %>% head()
 
 
 segments_and_mappoints = left_join(segments, segments_mappoints, by="SegmentID")
-nrow(test_join_3)
-test_join_3 %>% head()
+nrow(segments_and_mappoints)
+segments_and_mappoints %>% head()
+
+
+# a sanity check goup by and count, we have seen this count before, 
+# when we were exploring the segments_mappoints table by itself
+# we should see similar numbers after the join
+
+segments_and_mappoints %>% 
+  group_by(SegmentID) %>% 
+  summarise(my_count=n())
+#  SegmentID my_count
+#      <int>    <int>
+#1         1        6
+#2         2        2
+#3         4       13
+#4         6       58
+#5         7        2
+#6         8       57
+#7         9       46
+
+# ok, so it all jives with previous group by and count
+# a few segmnets defined with many map points
+# a few segments with only 2 points, a straight line
+# so unless you are on a flying bike, good luck following thos 2 points.
 
 
 
 
+# we should be able to bring it all together now
+# joing routes to segments to map points
+
+all_routes_and_segmentspoints <- left_join(routes_and_segments, segments_mappoints, by="SegmentID")
+all_routes_and_segmentspoints %>% nrow()
+all_routes_and_segmentspoints %>% head()
+
+all_routes_and_segmentspoints %>% 
+  select(RouteID, RouteName, SegmentID,RouteSegmentSequence, SegmentName, SegmentMapPointSequence, MapPointID) %>% 
+  arrange(RouteID, RouteSegmentSequence, SegmentMapPointSequence) %>% head()
+
+
+#  RouteID                RouteName SegmentID RouteSegmentSequence                            SegmentName SegmentMapPointSequence MapPointID
+#1       1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       1        184
+#2       1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       2        185
+#3       1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       3        186
+#4       1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       4        187
+#5       1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       5        188
+#6       1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       6        189
+
+# we need to join in the map points as the last step
+
+all_routes <- left_join(all_routes_and_segmentspoints, mappoints, by="MapPointID")
+all_routes %>% 
+  select(RouteID, RouteName, SegmentID,RouteSegmentSequence, SegmentName, SegmentMapPointSequence, MapPointID, lat, lon) %>% 
+  arrange(RouteID, RouteSegmentSequence, SegmentMapPointSequence) %>% head()
+
+
+# lets ee what routes are defined the best, the best meaning the most map points (assuming the person that created the points got it right)
+all_routes %>% 
+  group_by(RouteID, RouteName) %>% 
+  summarise(mappointcount=n())
+
+#RouteID RouteName                         mappointcount
+#    <int> <fct>                                     <int>
+#1       1 Sturbridge to P-Town Inn                     21
+#2       3 Sturbridge to Babson                         56
+#3       4 Babson to P-Town                             73
+#4       6 Sturbridge to MMA                             8
+#5       7 Babson to MMA                                60
+#6       8 MMA to Babson                                48
+#7       9 Babson to Patriot Place to Babson           103
+#8      10 Babson to Patriot Place                      57
+
+# so route 9 has a lot of map points, 
+# route 6 is not defined well at all
+
+# what are the speicifc types of map points, included in the route
+
+all_routes %>%
+  group_by(MapPointType) %>% 
+  summarise(point_type_count=n())
+#   MapPointType point_type_count
+#   <fct>                   <int>
+# 1 waypoint                  426
+
+# only waypoints included in the data
+# so when we want to draw the routes
+# we will place routes, waterstops and hubs onto the map seperately
+# the data could have been defined differently, i could have placed hubs into its own file
+# waterstops as well could have been broken out into its own file
+# but given each type of mappoint was just a map point, i decided to
+# keep it al into a single file with the type attribute
+# I think i may want to add in a file for route -> waterstop
+# and route -> hub
+
+
+
+# the route with the least amount of map points
+all_routes %>% 
+  select(RouteID, RouteName, SegmentID,RouteSegmentSequence, SegmentName, SegmentMapPointSequence, MapPointID, lat, lon) %>% 
+  arrange(RouteID, RouteSegmentSequence, SegmentMapPointSequence) %>% 
+  filter(RouteID == 6)
+
+
+# the most popular (by rider) classic 2 day route, sturbridge to ptown
+all_routes %>% 
+  select(RouteID, RouteName, SegmentID,RouteSegmentSequence, SegmentName, SegmentMapPointSequence, MapPointID, lat, lon) %>% 
+  arrange(RouteID, RouteSegmentSequence, SegmentMapPointSequence) %>% 
+  filter(RouteID == 1)
+
+#    RouteID                RouteName SegmentID RouteSegmentSequence                            SegmentName SegmentMapPointSequence MapPointID      lat       lon
+# 1        1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       1        184 42.11189 -72.08719
+# 2        1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       2        185 42.10617 -71.68397
+# 3        1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       3        186 42.09567 -71.64397
+# 4        1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       4        187 42.05627 -71.41965
+# 5        1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       5        188 42.05518 -71.42257
+# 6        1 Sturbridge to P-Town Inn         1                    1 Sturbridge to Dighton Rehoboth (Lunch)                       6        189 41.85192 -71.19944
+# 7        1 Sturbridge to P-Town Inn         2                    2                              DR to MMA                       1        190 41.85109 -71.19523
+# 8        1 Sturbridge to P-Town Inn         2                    2                              DR to MMA                       2        191 41.74258 -70.61869
+# 9        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       1        194 41.74519 -70.61558
+#10        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       2        195 41.75192 -70.59226
+#11        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       3        196 41.74354 -70.58639
+#12        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       4        197 41.76804 -70.52304
+#13        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       5        198 41.69602 -70.34429
+#14        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       6        199 41.70510 -70.22397
+#15        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       7        200 41.75626 -70.09041
+#16        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       8         18 41.78652 -69.99322
+#17        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                       9         19 41.83669 -69.97425
+#18        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                      10         20 41.91554 -69.98828
+#19        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                      11         21 42.03451 -70.08034
+#20        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                      12         22 42.06577 -70.15304
+#21        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                      13        201 42.03924 -70.19997
+
+
+write.csv(all_routes,"excluded\\_all_routes.csv", row.names = FALSE)
 
 
 
 
-#routes_to_segments <- left_join(routes, routes_segments, by="RouteID")
-#write.csv(routes_to_segments,"excluded\\_routes_to_segments.csv", row.names = FALSE)
-#routes_to_segments_waypoints = left_join(routes_to_segments, segments_mappoints, by="SegmentID")
-#write.csv(routes_to_segments_waypoints,"excluded\\_routes_to_segments_waypoints.csv", row.names = FALSE)
-#routes_waypoints = left_join(routes_to_segments_waypoints, waypoints, by='MapPointID')
-#write.csv(routes_waypoints,"excluded\\_routes_waypoints.csv", row.names = FALSE)
+##
+## sanity check #1/3
+##
+
+## do we have any mappoints of type waypoint, that are not being used in a segment?
+
+# use anti_join 
+# 
+#
+# anti_join ( table1, table2, by="")
+#  or
+# anti_join ( table1, table2, by=c("",""))
+#
+# what records are in table1 that are not in table2
+
+
+anti_join(mappoints, segments_mappoints, by="MapPointID")
+#    MapPointID          MapPointName MapPointType      lat       lon
+# 1           1            Sturbridge          hub 42.11296 -72.08805
+# 2           2          Whitinsville    waterstop 42.10892 -71.66112
+# 3           3              Franklin    waterstop 42.05620 -71.42097
+# 4           4      Dighton Rehoboth          hub 41.85193 -71.20301
+# 5           5               Wareham    waterstop 41.75448 -70.69883
+# 6           6 Mass Maritime Academy          hub 41.74085 -70.62206
+# 7           7            Barnstable    waterstop 41.69328 -70.28678
+# 8           8              Brewster    waterstop 41.77566 -70.03285
+# 9           9                P-Town          hub 42.03704 -70.19849
+#10          11            Middleboro    waterstop 41.90734 -70.88962
+#11          12         Patriot Place          hub 42.08836 -71.26162
+#12          13               Walpole    waterstop 42.16322 -71.23789
+#13          14                Babson          hub 42.29598 -71.26289
+#14          15              Medfield    waterstop 42.18563 -71.29756
+#15          16              Wrentham    waterstop 42.08357 -71.32636
+
+# so the results above are encouraging.  no waypoint types show up as missing
+
+##
+## sanity check #2/3
+##
+## are there any routs defined, without a map to a segment?
+
+anti_join(routes, routes_segments, by="RouteID")
+#[1] RouteID          RouteType        RouteName        RouteDescription
+#<0 rows> (or 0-length row.names)
+
+# good to go, all routes included in the routes_segments
+
+
+##
+## sanity check #3/3
+##
+
+# do we have any segments, that are not being used in a route?
+anti_join(segments, routes_segments, by="SegmentID")
+#[1] SegmentID          SegmentName        SegmentDescription Day               
+#<0 rows> (or 0-length row.names)
+
+
+# this is all to clean for my liking.  i need to test the case where the data is not so clean
+# i will crete an alt_set of data, with missing data and errors to ferret out my scripts bugs
+
 
 

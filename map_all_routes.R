@@ -20,27 +20,16 @@ segments_mappoints <- read.csv("data/segments_mappoints.csv", header = T)
 
 
 hubs <- subset(mappoints, MapPointType=='hub')
-write.csv(hubs,"excluded\\_hubs.csv", row.names = FALSE)
-
 waterstops <- subset(mappoints, MapPointType=='waterstop')
-write.csv(waterstops,"excluded\\_waterstops.csv", row.names = FALSE)
-
-waypoints <- subset(mappoints, MapPointType=='waypoint')
-write.csv(waypoints,"excluded\\_waypoints.csv", row.names = FALSE)
 
 
-# routes > route_segment > segments > routes_segments > mappoints
+routes_and_segments_temp = left_join(routes, routes_segments, by="RouteID")
+routes_and_segments = right_join(routes_and_segments_temp, segments, by="SegmentID")
+segments_and_mappoints = left_join(segments, segments_mappoints, by="SegmentID")
+all_routes_and_segmentspoints <- left_join(routes_and_segments, segments_mappoints, by="SegmentID")
+all_routes <- left_join(all_routes_and_segmentspoints, mappoints, by="MapPointID")
 
 
-routes_to_segments <- left_join(routes, routes_segments, by="RouteID")
-write.csv(routes_to_segments,"excluded\\_routes_to_segments.csv", row.names = FALSE)
-
-routes_to_segments_waypoints = left_join(routes_to_segments, segments_mappoints, by="SegmentID")
-write.csv(routes_to_segments_waypoints,"excluded\\_routes_to_segments_waypoints.csv", row.names = FALSE)
-
-
-routes_waypoints = left_join(routes_to_segments_waypoints, waypoints, by='MapPointID')
-write.csv(routes_waypoints,"excluded\\_routes_waypoints.csv", row.names = FALSE)
 
 map_state = "massachusetts"
 counties <- map_data("county")
@@ -57,16 +46,13 @@ essex_county <- subset(state_counties, subregion == 'essex')
 middlesex_county <- subset(state_counties, subregion == 'middlesex')
 suffolk_county <- subset(state_counties, subregion == 'suffolk')
 
-route_sturbridge_to_ptown = subset(routes_waypoints, RouteID==1)
-write.csv(route_sturbridge_to_ptown,"excluded//_route_sturbridge_to_ptown.csv", row.names=F)
+route_sturbridge_to_ptown = subset(all_routes, RouteID==1)
 
-route_sturbridge_to_ptown
-str(route_sturbridge_to_ptown)
-route_sturbridge_to_babson = subset(routes_waypoints, RouteID==3)
-write.csv(route_sturbridge_to_babson,"excluded//_route_sturbridge_to_babson.csv", row.names=F)
-
-route_babson_to_ptown = subset(routes_waypoints, RouteID==4)
-route_babson_to_babson = subset(routes_waypoints, RouteID==9)
+#route_sturbridge_to_ptown
+#str(route_sturbridge_to_ptown)
+route_sturbridge_to_babson = subset(all_routes, RouteID==3)
+route_babson_to_ptown = subset(all_routes, RouteID==4)
+route_babson_to_babson = subset(all_routes, RouteID==9)
 
 
 
@@ -108,7 +94,7 @@ ggplot()+
   geom_polygon(data = suffolk_county, mapping = aes(x = long, y = lat), fill="grey") + 
   geom_point(data = waterstops, aes(lon,lat), color="blue", size=2)+
   geom_point(data = hubs, aes(lon,lat), color="darkgreen", size=5)+
-  geom_path(data = routes_waypoints, aes(lon,lat), color="red", size=1)+
+  geom_path(data = all_routes, aes(lon,lat), color="red", size=1)+
   facet_wrap("RouteName", ncol=3)
   
 
