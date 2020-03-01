@@ -4,12 +4,12 @@ A learning project for myself.  I volunterr for the Pan Mass Challenge as volunt
 
 ## Getting Started
 
-If you want to clone the repo and play with R scripts, everything should be self explanatory.  The data is in the data/ folder and the packacges used are fairly common.
+If you want to clone the repo and play with R scripts, everything should be self explanatory.  The data is in the data/ folder and the packages used are fairly common.
 
 
 ### Prerequisites
 
-in my code, for debugging i do save data to csv into the excluded/ folder.  You may want to comment out that code.  You wont find that foder in github, its removed via the .gitignore
+In my code, for debugging, i do save data to .csv (from time to time) into the excluded/ folder.  You may want to comment out that code.  You wont find that foder in github, its removed via the .gitignore
 
 
 
