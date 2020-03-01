@@ -178,28 +178,205 @@ sapply(routes, function(x) sum(is.na(x)))
 ## explore Segements
 ## 
 
-##
-## explore segment points
-##
+nrow(segments)
+#[1] 7
+
+segments 
+
+#  SegmentID                            SegmentName                     SegmentDescription Day
+#1         1 Sturbridge to Dighton Rehoboth (Lunch) Sturbridge to Dighton Rehoboth (Lunch)   1
+#2         2                              DR to MMA                              DR to MMA   1
+#3         4                          MMA to P-Town               Brerewster to P-Town Inn   2
+#4         6     Babson to Dighton Rehoboth (Lunch)     Babson to Dighton Rehoboth (Lunch)   1
+#5         7                   MMA to Patriot Place                   MMA to Patriot Place   2
+#6         8                Babson to Patriot Place                Babson to Patriot Place   2
+#7         9                Patriot Place to Babson                Patriot Place to Babson   2
+
+# one occular pat down and we see all the data with no NAs
+
+
 
 
 ##
 ## explore routes_segments
 ##
 
+nrow(routes_segments)
+#[1] 19
+
+routes_segments %>% head()
+#  RouteID RouteSegmentSequence SegmentID
+#1       1                    1         1
+#2       1                    2         2
+#3       1                    3         4
+#4       3                    1         1
+#5       3                    2         2
+#6       3                    3         7
+
+# one to many relationship, routes >> routes_segments
+
+routes_and_segments_temp = left_join(routes, routes_segments, by="RouteID")
+routes_and_segments_temp %>% head()
+#  RouteID RouteType                RouteName         RouteDescription RouteSegmentSequence SegmentID
+#1       1     2 Day Sturbridge to P-Town Inn Sturbridge to P-Town Inn                    1         1
+#2       1     2 Day Sturbridge to P-Town Inn Sturbridge to P-Town Inn                    2         2
+#3       1     2 Day Sturbridge to P-Town Inn Sturbridge to P-Town Inn                    3         4
+#4       3     2 Day     Sturbridge to Babson     Sturbridge to Babson                    1         1
+#5       3     2 Day     Sturbridge to Babson     Sturbridge to Babson                    2         2
+#6       3     2 Day     Sturbridge to Babson     Sturbridge to Babson                    3         7
+
+
+
+# and there is a segmentid, many to one relationship
+routes_and_segments = right_join(routes_and_segments_temp, segments, by="SegmentID")
 
 
 
 
-# routes > route_segment > segments > routes_segments > mappoints
+routes_and_segments %>% head() 
+
+routes_and_segments %>% 
+  select(RouteID, RouteType, RouteName, RouteSegmentSequence,SegmentID,SegmentName) %>% 
+  arrange(RouteID) %>% 
+  head()
+
+#  RouteID RouteType                RouteName RouteSegmentSequence SegmentID                            SegmentName
+#1       1     2 Day Sturbridge to P-Town Inn                    1         1 Sturbridge to Dighton Rehoboth (Lunch)
+#2       1     2 Day Sturbridge to P-Town Inn                    2         2                              DR to MMA
+#3       1     2 Day Sturbridge to P-Town Inn                    3         4                          MMA to P-Town
+#4       3     2 Day     Sturbridge to Babson                    1         1 Sturbridge to Dighton Rehoboth (Lunch)
+#5       3     2 Day     Sturbridge to Babson                    2         2                              DR to MMA
+#6       3     2 Day     Sturbridge to Babson                    3         7                   MMA to Patriot Place
 
 
-routes_to_segments <- left_join(routes, routes_segments, by="RouteID")
-write.csv(routes_to_segments,"excluded\\_routes_to_segments.csv", row.names = FALSE)
+routes_and_segments %>%
+  select(RouteID, RouteType, RouteName, RouteSegmentSequence,SegmentID,SegmentName) %>%
+  arrange(RouteID) %>%
+  filter(RouteID<5) 
+#   RouteID RouteType                RouteName RouteSegmentSequence SegmentID                            SegmentName
+#1        1     2 Day Sturbridge to P-Town Inn                    1         1 Sturbridge to Dighton Rehoboth (Lunch)
+#2        1     2 Day Sturbridge to P-Town Inn                    2         2                              DR to MMA
+#3        1     2 Day Sturbridge to P-Town Inn                    3         4                          MMA to P-Town
+#4        3     2 Day     Sturbridge to Babson                    1         1 Sturbridge to Dighton Rehoboth (Lunch)
+#5        3     2 Day     Sturbridge to Babson                    2         2                              DR to MMA
+#6        3     2 Day     Sturbridge to Babson                    3         7                   MMA to Patriot Place
+#7        3     2 Day     Sturbridge to Babson                    4         9                Patriot Place to Babson
+#8        4     2 Day         Babson to P-Town                    2         2                              DR to MMA
+#9        4     2 Day         Babson to P-Town                    3         4                          MMA to P-Town
+#10       4     2 Day         Babson to P-Town                    1         6     Babson to Dighton Rehoboth (Lunch)
 
-routes_to_segments_waypoints = left_join(routes_to_segments, segments_mappoints, by="SegmentID")
-write.csv(routes_to_segments_waypoints,"excluded\\_routes_to_segments_waypoints.csv", row.names = FALSE)
+
+routes_and_segments %>% group_by(RouteID) %>% 
+  summarise(count_of_route_segmnets=n())
+
+#  RouteID count_of_route_segmnets
+#    <int>                   <int>
+#1       1                       3
+#2       3                       4
+#3       4                       3
+#4       6                       2
+#5       7                       2
+#6       8                       2
+#7       9                       2
+#8      10                       1
+
+# varying segments per route, a high of 4 for route 3, and a low of 1 for route 10
 
 
-routes_waypoints = left_join(routes_to_segments_waypoints, waypoints, by='MapPointID')
-write.csv(routes_waypoints,"excluded\\_routes_waypoints.csv", row.names = FALSE)
+# how many times are each segment in play
+# group by ID
+routes_and_segments %>% 
+  group_by(SegmentID) %>% 
+  summarise(segment_count=n())
+#  SegmentID segment_count
+#      <int>         <int>
+#1         1             3
+#2         2             5
+#3         4             2
+#4         6             2
+#5         7             2
+#6         8             2
+#7         9             3
+
+#same as abouve, group by name
+routes_and_segments %>% 
+  group_by(SegmentName) %>% 
+  summarise(segment_count=n())
+#  SegmentName                            segment_count
+#  <fct>                                          <int>
+#1 Babson to Dighton Rehoboth (Lunch)                 2
+#2 Babson to Patriot Place                            2
+#3 DR to MMA                                          5
+#4 MMA to P-Town                                      2
+#5 MMA to Patriot Place                               2
+#6 Patriot Place to Babson                            3
+#7 Sturbridge to Dighton Rehoboth (Lunch)             3
+
+# same again, group by id and name
+routes_and_segments %>% 
+  group_by(SegmentID,SegmentName) %>% 
+  summarise(segment_count=n())
+#  SegmentID SegmentName                            segment_count
+#      <int> <fct>                                          <int>
+#1         1 Sturbridge to Dighton Rehoboth (Lunch)             3
+#2         2 DR to MMA                                          5
+#3         4 MMA to P-Town                                      2
+#4         6 Babson to Dighton Rehoboth (Lunch)                 2
+#5         7 MMA to Patriot Place                               2
+#6         8 Babson to Patriot Place                            2
+#7         9 Patriot Place to Babson                            3
+
+
+# so the Dighton Rehoboth to Mass Maritime segment is in use by 5 routes
+# Babson to DR is in use by 2 routes, hmmmm, thats peculiar, I will need to investigate this
+
+write.csv(all_routes_and_segments,"excluded\\_all_routes_investigate.csv", row.names = FALSE)
+
+# so there are 2 official routes that pas through the segment Babson to DR
+#  1 day, Babson to MMA
+#  2 day, Babson to MMA to PTown
+#  its redundant a bit but when riders register,the sign up for wither of the 2 routs, not an ala carte type of selection.
+
+
+##
+## explore segments map points
+##
+
+nrow(segments_mappoints)
+#[1] 184
+
+# ah we are now getting to the meat of the data
+
+
+segments_mappoints %>% head()
+#  SegmentID SegmentMapPointSequence MapPointID
+#1         1                       1        184
+#2         1                       2        185
+#3         1                       3        186
+#4         1                       4        187
+#5         1                       5        188
+#6         1                       6        189
+# SegmentId is the foreign key, with a sequence to mke it unique
+# and a join out to the map point, witch we can assume may be a one to many, dont assume a point inst used more than once
+
+
+
+segments_and_mappoints = left_join(segments, segments_mappoints, by="SegmentID")
+nrow(test_join_3)
+test_join_3 %>% head()
+
+
+
+
+
+
+
+
+#routes_to_segments <- left_join(routes, routes_segments, by="RouteID")
+#write.csv(routes_to_segments,"excluded\\_routes_to_segments.csv", row.names = FALSE)
+#routes_to_segments_waypoints = left_join(routes_to_segments, segments_mappoints, by="SegmentID")
+#write.csv(routes_to_segments_waypoints,"excluded\\_routes_to_segments_waypoints.csv", row.names = FALSE)
+#routes_waypoints = left_join(routes_to_segments_waypoints, waypoints, by='MapPointID')
+#write.csv(routes_waypoints,"excluded\\_routes_waypoints.csv", row.names = FALSE)
+
+
