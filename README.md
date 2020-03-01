@@ -1,6 +1,6 @@
 # PMC Routes Map
 
-A learning project for myself.  I volunterr for the Pan Mass Challenge as volunteer photography crew lead.  For me it is important to know all the routes, waterstops and hub locations so i can properly staff the volunteer photographers on PMC weekend.  This is a fun learning project to get better aquainted with data exploration and mapping within R.
+A learning project for myself.  I volunteer for the Pan Mass Challenge as crew lead for the volunteer photographers.  For me it is important to know all the routes, waterstops and hub locations so i can properly staff the volunteer photographers on PMC weekend.  This is a fun learning project to get better aquainted with data exploration and mapping within R.
 
 
 A few examples of the maps produced by this R code
