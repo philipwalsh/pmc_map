@@ -9,7 +9,7 @@ Babson to Babson (one day) Sunday route
 ![Babson To Babson PMC Route Image](/images/bab_2_bab.JPG)
 
 
-Sturbridge to P-Town and Sturbridge to Babson (two day) Saturday and Sunday routes.  
+A facet wrapped ggplot, only 2 of the facets pictured here.  
 ![Babson To Babson PMC Route Image](/images/facet_wrap.JPG)
 
 
