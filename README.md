@@ -20,7 +20,12 @@ If you want to clone the repo and play with R scripts, everything should be self
 
 ### Prerequisites
 
-In my code, for debugging, i do save data to .csv (from time to time) into the excluded/ folder.  You may want to comment out that code.  You wont find that foder in github, its removed via the .gitignore
+In my code, for debugging, i do save data to .csv (from time to time) into the excluded/ folder.  
+```
+write.csv(waterstops,"excluded\\...
+```
+
+You may want to comment out that code.  You wont find the excluded/ folder in github, its removed via the .gitignore
 
 
 
