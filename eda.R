@@ -8,7 +8,7 @@ library(tidyverse)
 # all data stored in .csv files in the data/ dir
 
 list.dirs(recursive=F)
-#[1] "./.git"        "./.Rproj.user" "./.vs"         "./data"        "./excluded"
+#[1] "./.git"        "./.Rproj.user" "./.vs"         "./altdata"     "./data"        "./excluded"    "./images"
 
 list.files('data/')
 #[1] "mappoints.csv" "routes.csv" "routes_segments.csv" "segments.csv" "segments_mappoints.csv"
