@@ -169,7 +169,7 @@ routes
 
 # occular pat down - no NA(s)
 
-#are there any routes with no segments, basically a router header with no detail?
+#are there any routes with no segments, basically a route header with no detail?
 
 anti_join(routes, routes_segments)
 #Joining, by = "RouteID"
@@ -282,6 +282,7 @@ routes_segments %>% head()
 # we just gave the table a check against segments, so thats good, what about routes?
 # and we already checked routes to be sure routes missing segments were removed
 # do we have any route_segments referring to an unknown route?
+
 anti_join(routes_segments, routes)
 #  RouteID RouteSegmentSequence SegmentID
 #1      12                    1         1
@@ -330,20 +331,70 @@ routes_segments %>% nrow()
 
 
 
+##
+## explore segments_mappoints
+##
+
+segments_mappoints %>% nrow()
+#[1] 186
+
+segments_mappoints %>% group_by(SegmentID, MapPointID) %>% 
+  summarise(count_it=n()) %>% arrange(desc(count_it))
+
+#SegmentID MapPointID count_it
+#      <int>      <int>    <int>
+#1         1        184        2
+#2         1        185        1
+#3         1        186        1
+#4         1        187        1
+#5         1        188        
+
+# look slike we have a duplicate
+
+segments_mappoints %>% filter(MapPointID==184)
+
+#SegmentID SegmentMapPointSequence MapPointID
+#1         1                       1        184
+#2         1                       1        184
+
+# this simple call will do the trick
+segments_mappoints %>% nrow()
+segments_mappoints <- unique(segments_mappoints)
+segments_mappoints %>% nrow()
 
 
-## TODO: resume here on exploring the alt_data
+segments_mappoints %>% group_by(SegmentID, MapPointID) %>% 
+  summarise(count_it=n()) %>% arrange(desc(count_it))
+
+
+#   SegmentID MapPointID count_it
+#      <int>      <int>    <int>
+#1         1        184        1
+#2         1        185        1
+#3         1        186        1
+
+
+# all better
+
+# do all the foreign keys out to mappoints jive, do they all exist?
+
+anti_join(segments_mappoints, mappoints)
+#  SegmentID SegmentMapPointSequence MapPointID
+#1         1                       1        926
+#2         6                      49        174
+
+#nope, a few bad entries snuck in
+# i remember 174 from before, that was mis named 1740 and we dropped it like it was hot
+
+
+segments_mappoints %>% filter(SegmentID %in% c(1,6))
+
+# and 926 is clearly just a bogus entry, lets drop them both
 
 
 
-
-
-
-
-
-
-
-
+segments_mappoints <- segments_mappoints[!(segments_mappoints$MapPointID %in% c(174,926)),]
+segments_mappoints %>% nrow()
 
 
 # one to many relationship, routes >> routes_segments
@@ -408,16 +459,16 @@ routes_and_segments %>%
 routes_and_segments %>% group_by(RouteID, RouteName) %>% 
   summarise(count_of_route_segments=n())
 
-#  RouteID count_of_route_segmnets
-#    <int>                   <int>
-#1       1                       3
-#2       3                       4
-#3       4                       3
-#4       6                       2
-#5       7                       2
-#6       8                       2
-#7       9                       2
-#8      10                       1
+#  RouteID RouteName                         count_of_route_segments
+#    <int> <fct>                                               <int>
+#1       1 Sturbridge to P-Town Inn                                3
+#2       3 Sturbridge to Babson                                    4
+#3       4 Babson to P-Town                                        3
+#4       6 Sturbridge to MMA                                       2
+#5       7 Babson to MMA                                           2
+#6       8 MMA to Babson                                           2
+#7       9 Babson to Patriot Place to Babson                       2
+#8      10 Babson to Patriot Place                                 1
 
 # varying segments per route, a high of 4 for route 3, and a low of 1 for route 10
 
@@ -443,7 +494,7 @@ routes_and_segments %>%
 # DR to MMA (aka Dighton Rehoboth to Mass Maritime) segment is in use by 5 routes
 # Babson to Dighton Rehoboth is in use by 2 routes, hmmmm, thats peculiar, I will need to investigate this
 
-write.csv(all_routes_and_segments,"excluded\\_all_routes_investigate.csv", row.names = FALSE)
+write.csv(all_routes_and_segments,"excluded\\_all_routes_investigate_alt.csv", row.names = FALSE)
 
 # 
 # so there are 2 official routes that pass through the segment Babson to DR
@@ -459,7 +510,7 @@ write.csv(all_routes_and_segments,"excluded\\_all_routes_investigate.csv", row.n
 ##
 
 nrow(segments_mappoints)
-#[1] 184
+#[1] 183
 
 # ah we are now getting to the meat (or glue) of the data
 
@@ -492,18 +543,18 @@ segments_and_mappoints %>%
   summarise(my_count=n())
 #  SegmentID my_count
 #      <int>    <int>
-#1         1        6
+#1         1        8
 #2         2        2
-#3         4       13
+#3         4       12
 #4         6       58
 #5         7        2
 #6         8       57
 #7         9       46
 
-# ok, so it all jives with previous group by and count
-# a few segmnets defined with many map points
-# a few segments with only 2 points, a straight line
-# so unless you are on a flying bike, good luck following thos 2 points.
+segments_and_mappoints %>% filter(SegmentID==4)
+
+
+
 
 
 # we should be able to bring it all together now
@@ -511,11 +562,14 @@ segments_and_mappoints %>%
 
 all_routes_and_segmentspoints <- left_join(routes_and_segments, segments_mappoints, by="SegmentID")
 all_routes_and_segmentspoints %>% nrow()
-#[1] 426
+#[1] 429
 
 all_routes_and_segmentspoints %>% 
   select(RouteID, RouteName, SegmentID,RouteSegmentSequence, SegmentName, SegmentMapPointSequence, MapPointID) %>% 
   arrange(RouteID, RouteSegmentSequence, SegmentMapPointSequence) %>% head()
+
+
+
 
 
 #  RouteID                RouteName SegmentID RouteSegmentSequence                            SegmentName SegmentMapPointSequence MapPointID
@@ -530,7 +584,8 @@ all_routes_and_segmentspoints %>%
 
 all_routes <- left_join(all_routes_and_segmentspoints, mappoints, by="MapPointID")
 all_routes %>% nrow()
-#[1] 426
+#[1] 424
+
 
 all_routes %>% 
   select(RouteID, RouteName, SegmentID,RouteSegmentSequence, SegmentName, SegmentMapPointSequence, MapPointID, lat, lon) %>% 
@@ -566,22 +621,21 @@ all_routes %>%
 
 # what are the speicifc types of map points, included in the route
 
+
+
 all_routes %>%
   group_by(MapPointType) %>% 
   summarise(point_type_count=n())
 #   MapPointType point_type_count
 #   <fct>                   <int>
-# 1 waypoint                  426
+# 1 waypoint                  424
 
-# only waypoints included in the data
-# so when we want to draw the routes
-# we will place routes, waterstops and hubs onto the map seperately
-# the data could have been defined differently, i could have placed hubs into its own file
-# waterstops as well could have been broken out into its own file
-# but given each type of mappoint was just a map point, i decided to
-# keep it al into a single file with the type attribute
-# I think i may want to add in a file for route -> waterstop
-# and route -> hub
+
+
+write.csv(all_routes,"excluded\\_all_routes_alt.csv", row.names = FALSE)
+
+
+
 
 
 
@@ -632,7 +686,7 @@ all_routes %>%
 #21        1 Sturbridge to P-Town Inn         4                    3                          MMA to P-Town                      13        201 42.03924 -70.19997
 
 
-write.csv(all_routes,"excluded\\_all_routes.csv", row.names = FALSE)
+
 
 
 
